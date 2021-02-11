@@ -1,19 +1,22 @@
+def listDivide(numbers, divide=2):
+    amt = 0
+    for num in numbers:
+        if(num % divide == 0):
+            amt += 1
+    return amt
 
-def listDivide(numbers, divide):
-    """
-    The function returns the number of elements in the numbers list that are divisibleby divide
-    """
+class ListDivideException(Exception):
     pass
-
 def testListDivide():
-    """
-    Test listDivide
-    """
-    assert listDivide([1,2,3,4,5]) == 2
-    assert listDivide([2,4,6,8,10]) == 5
-    assert listDivide([30, 54, 63,98, 100], divide=10) == 2
-    assert listDivide([]) == 0
-    assert listDivide([1,2,3,4,5], 1) == 5
-    
-if __name__ == "__main__":
-    testListDivide()
+    print("calling listDivide")
+    def listDivide(numbers, divide=2):
+        amt = 0
+        for num in numbers:
+            if(num % divide == 0):
+                amt += 1
+        return amt
+print(listDivide([1,2,3,4,5]))
+print(listDivide([2,4,6,8,10]))
+print(listDivide([30, 54, 63,98,100],10))
+print(listDivide([]))
+print(listDivide([1,2,3,4,5],1))
